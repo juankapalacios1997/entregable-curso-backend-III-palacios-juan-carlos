@@ -1,10 +1,11 @@
 import express from "express";
-import mongoose from "mongoose";
+import "dotenv/config";
+// import mongoose from "mongoose";
 
 import mocksRouter from "./routers/api/mocks.router.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 // mongoose.connect("mongodb+srv://jcmaster97_db_user:TKDNQVj99JySvi8P@testcluster.tq5mbma.mongodb.net/?appName=TestCluster");
 
