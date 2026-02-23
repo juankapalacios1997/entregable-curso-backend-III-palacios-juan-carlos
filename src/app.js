@@ -1,13 +1,13 @@
 import express from "express";
 import "dotenv/config";
-// import mongoose from "mongoose";
+import mongoose from "mongoose";
 
 import mocksRouter from "./routers/api/mocks.router.js";
 
 const app = express();
 const PORT = process.env.PORT;
 
-// mongoose.connect("mongodb+srv://jcmaster97_db_user:TKDNQVj99JySvi8P@testcluster.tq5mbma.mongodb.net/?appName=TestCluster");
+mongoose.connect(`${process.env.MONGO_URL}`);
 
 app.use(express.json());
 

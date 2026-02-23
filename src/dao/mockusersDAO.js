@@ -5,15 +5,15 @@ export class mockUsersDAO {
         this.mockUsersModel = mockUsersModel;
     }
 
-    get() {
-        return this.mockUsersModel.find().lean();
+    async get() {
+        return await this.mockUsersModel.find().lean();
     }
 
-    getBy(filter) {
-        return this.mockUsersModel.findOne(filter).lean();
+    async getBy(filter) {
+        return await this.mockUsersModel.findOne(filter).lean();
     }
 
-    create(mockuser) {
-        return this.mockUsersModel.create(mockuser);
+    async create(mockuser) {
+        return await this.mockUsersModel.create(mockuser);
     }
 }
